@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="oCP-rg-EKE">
-                                <rect key="frame" x="16" y="135" width="358" height="216"/>
+                                <rect key="frame" x="16" y="135" width="358" height="141"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L31-o0-Sxz">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="27.333333333333332"/>
@@ -73,8 +73,8 @@
                                             <constraint firstAttribute="height" constant="2" id="ym0-0I-6Rg"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SE-6P-76F">
-                                        <rect key="frame" x="0.0" y="150" width="358" height="27.333333333333343"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SE-6P-76F">
+                                        <rect key="frame" x="0.0" y="141" width="358" height="27.333333333333343"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27.333333333333343" id="qEm-Nx-Zuw"/>
                                         </constraints>
@@ -82,16 +82,16 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-0I-Vcq">
-                                        <rect key="frame" x="0.0" y="186.33333333333331" width="358" height="18.666666666666657"/>
+                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-0I-Vcq">
+                                        <rect key="frame" x="0.0" y="141" width="358" height="18.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18.666666666666657" id="xOw-iR-Lq5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUb-bZ-IQG">
-                                        <rect key="frame" x="0.0" y="214" width="358" height="2"/>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUb-bZ-IQG">
+                                        <rect key="frame" x="0.0" y="141" width="358" height="2"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="Rm0-Dd-Omf"/>
@@ -99,8 +99,8 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMK-gH-Rr4">
-                                <rect key="frame" x="16" y="371" width="182" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMK-gH-Rr4">
+                                <rect key="frame" x="16" y="296" width="160" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
                                     <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,7 +110,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZZ-IT-GRd">
-                                <rect key="frame" x="248.33333333333334" y="371" width="125.66666666666666" height="34.333333333333314"/>
+                                <rect key="frame" x="248.33333333333334" y="296" width="125.66666666666666" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Resend email">
                                     <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -120,7 +120,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kp-8B-SF0">
-                                <rect key="frame" x="36" y="425.33333333333331" width="318" height="76"/>
+                                <rect key="frame" x="36" y="350.33333333333331" width="318" height="76"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="loginBtn" title=""/>
                                 <connections>
@@ -151,6 +151,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JFZ-nB-bu8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="CEU-aK-fC6"/>
+                            <constraint firstItem="3kp-8B-SF0" firstAttribute="top" secondItem="JMK-gH-Rr4" secondAttribute="bottom" constant="20" id="FSQ-hb-6mW"/>
                             <constraint firstItem="JFZ-nB-bu8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ryx-Qc-o5U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a74-1f-Nlt" secondAttribute="bottom" id="TSW-Wy-Ub6"/>
                             <constraint firstItem="3kp-8B-SF0" firstAttribute="top" secondItem="BZZ-IT-GRd" secondAttribute="bottom" constant="20" id="W74-WR-BhO"/>
