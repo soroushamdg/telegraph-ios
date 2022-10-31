@@ -9,7 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    // IBOutlets
+    //MARK: IBOutlets
     //labels
     @IBOutlet weak var emailLabelOutlet: UILabel!
     @IBOutlet weak var repeatPasswordLabelOutlet: UILabel!
@@ -33,9 +33,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupTextFieldDelegates()
     }
     
-    // IBActions
+    //MARK: IBActions
 
     @IBAction func loginButtonPressed(_ sender: Any) {
     }
@@ -47,6 +48,31 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signupButtonPressed(_ sender: Any) {
+    }
+    
+    //MARK: SETUP
+    private func setupTextFieldDelegates(){
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_: )), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_: )), for: .editingChanged)
+        repeatPasswordTextField.addTarget(self, action: #selector(textFieldDidChange(_: )), for: .editingChanged)
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField){
+        updatePlaceholderLabels(textField: textField)
+    }
+    
+    
+    //MARK: ANIMATIONS
+    
+    private func updatePlaceholderLabels(textField: UITextField) {
+        switch textField {
+        case emailTextField:
+            emailLabelOutlet.text = textField.hasText ? "Email" : ""
+        case passwordTextField:
+            passwordTextField.text = textField.hasText ? "Password" : ""
+        default:
+            repeatPasswordTextField.text = textField.hasText ? "Repeat Password" : ""
+        }
     }
 }
 
