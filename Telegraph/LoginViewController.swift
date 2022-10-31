@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class LoginViewController: UIViewController {
     
@@ -43,12 +44,27 @@ class LoginViewController: UIViewController {
     //MARK: IBActions
 
     @IBAction func loginButtonPressed(_ sender: Any) {
+        if isDataInputedFor(type: isLogin ? "login" : "register") {
+            
+        } else {
+            ProgressHUD.showFailed("All fields are required!")
+        }
     }
     
     @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
+        if isDataInputedFor(type: "password") {
+            // forgot password
+        } else {
+            ProgressHUD.showFailed("Email is required!")
+        }
     }
     
     @IBAction func resendEmailButtonPressed(_ sender: Any) {
+        if isDataInputedFor(type: "password") {
+            // resend email
+        } else {
+            ProgressHUD.showFailed("Email is required!")
+        }
     }
     
     @IBAction func signupButtonPressed(_ sender: UIButton) {
@@ -101,6 +117,17 @@ class LoginViewController: UIViewController {
         }
     }
     
+    //MARK: HELPERS
+    private func isDataInputedFor(type: String) -> Bool {
+        switch type {
+        case "login":
+            return emailTextField.text != "" && passwordTextField.text != ""
+        case "registeration":
+            return emailTextField.text != "" && passwordTextField.text != "" && repeatPasswordTextField.text != ""
+        default: //forgot password
+            return emailTextField.text != ""
+        }
+    }
     
 }
 
