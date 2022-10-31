@@ -87,6 +87,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
                                     <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgotPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cac-7g-i06"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZZ-IT-GRd">
                                 <rect key="frame" x="248.33333333333334" y="371" width="125.66666666666666" height="34.333333333333314"/>
@@ -94,11 +97,17 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Resend email">
                                     <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="resendEmailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FX5-uL-XVg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kp-8B-SF0">
                                 <rect key="frame" x="36" y="425.33333333333331" width="318" height="76"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="loginBtn" title=""/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tc6-PV-auG"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a74-1f-Nlt">
                                 <rect key="frame" x="65" y="775.66666666666663" width="260" height="34.333333333333371"/>
@@ -113,6 +122,9 @@
                                         <rect key="frame" x="178.33333333333334" y="0.0" width="81.666666666666657" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sign up"/>
+                                        <connections>
+                                            <action selector="signupButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kgr-TE-TZY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -136,6 +148,19 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BZZ-IT-GRd" secondAttribute="trailing" constant="16" id="yvE-Nb-jlv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailLabelOutlet" destination="L31-o0-Sxz" id="BW6-Mp-KOn"/>
+                        <outlet property="emailTextField" destination="FKw-DF-v2b" id="UkZ-5y-njv"/>
+                        <outlet property="loginButton" destination="3kp-8B-SF0" id="XjT-Le-RAf"/>
+                        <outlet property="passwordLabelOutlet" destination="Nhe-It-ftj" id="dpr-Uh-gWJ"/>
+                        <outlet property="passwordTextField" destination="aza-x0-hem" id="k03-7f-lim"/>
+                        <outlet property="repeatPasswordLabelOutlet" destination="2SE-6P-76F" id="4DM-33-RkC"/>
+                        <outlet property="repeatPasswordLineView" destination="dUb-bZ-IQG" id="lgg-Uu-5GR"/>
+                        <outlet property="repeatPasswordTextField" destination="ysk-0I-Vcq" id="gFB-sJ-HQG"/>
+                        <outlet property="resendButton" destination="BZZ-IT-GRd" id="gRx-5u-Sxq"/>
+                        <outlet property="signupButton" destination="I4R-Dj-z8S" id="zEM-pa-F7C"/>
+                        <outlet property="signupLabel" destination="KxA-rQ-ceg" id="dtz-CK-zo4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
