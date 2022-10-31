@@ -37,6 +37,7 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         updateUIFor(login: true)
         setupTextFieldDelegates()
+        setupBackgroundTap()
     }
     
     //MARK: IBActions
@@ -66,6 +67,15 @@ class LoginViewController: UIViewController {
         updatePlaceholderLabels(textField: textField)
     }
     
+    private func setupBackgroundTap() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backgroundTap))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func backgroundTap(){
+        view.endEditing(false)
+    }
+    
     
     //MARK: ANIMATIONS
     
@@ -90,5 +100,7 @@ class LoginViewController: UIViewController {
             repeatPasswordTextField.text = textField.hasText ? "Repeat Password" : ""
         }
     }
+    
+    
 }
 
