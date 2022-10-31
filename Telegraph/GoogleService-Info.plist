@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1015133296444-jai4kikdnkcna9fdlt6arr1f1gjmjjcb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1015133296444-jai4kikdnkcna9fdlt6arr1f1gjmjjcb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAg4mdjrecjOI30ZXky8lenUkdceMuYxVU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1015133296444</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>am.soroush.Telegraph</string>
+	<key>PROJECT_ID</key>
+	<string>telegraph-662da</string>
+	<key>STORAGE_BUCKET</key>
+	<string>telegraph-662da.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1015133296444:ios:1552a967004ea5c0ea3039</string>
+</dict>
+</plist>
