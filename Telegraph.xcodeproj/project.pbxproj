@@ -16,6 +16,8 @@
 		9020B2DE2910326900FE883D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9020B2DD2910326900FE883D /* GoogleService-Info.plist */; };
 		9049667029118C1000183EBF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049666F29118C1000183EBF /* User.swift */; };
 		9049667229118E6B00183EBF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049667129118E6B00183EBF /* Constants.swift */; };
+		904966762911933700183EBF /* FCollectionRefrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904966752911933700183EBF /* FCollectionRefrence.swift */; };
+		904966792911943D00183EBF /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904966782911943D00183EBF /* FirebaseUserListener.swift */; };
 		E31E10CCE5C9B7ACC240604D /* Pods_Telegraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A406C20A439F87C76482CE6 /* Pods_Telegraph.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		9020B2DD2910326900FE883D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9049666F29118C1000183EBF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9049667129118E6B00183EBF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		904966752911933700183EBF /* FCollectionRefrence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionRefrence.swift; sourceTree = "<group>"; };
+		904966782911943D00183EBF /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
 		92A550144BF7D95DBEE9C9E1 /* Pods-Telegraph.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telegraph.release.xcconfig"; path = "Target Support Files/Pods-Telegraph/Pods-Telegraph.release.xcconfig"; sourceTree = "<group>"; };
 		CEF14D57E068D754027113BB /* Pods-Telegraph.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telegraph.debug.xcconfig"; path = "Target Support Files/Pods-Telegraph/Pods-Telegraph.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +81,7 @@
 		9010ADCD291023DB00BCDF0E /* Telegraph */ = {
 			isa = PBXGroup;
 			children = (
+				90496677291193EF00183EBF /* FirebaseHelpers */,
 				9049666E29118C0200183EBF /* Models */,
 				9010ADCE291023DB00BCDF0E /* AppDelegate.swift */,
 				9010ADD0291023DB00BCDF0E /* SceneDelegate.swift */,
@@ -105,6 +110,15 @@
 				9049667129118E6B00183EBF /* Constants.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		90496677291193EF00183EBF /* FirebaseHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				904966752911933700183EBF /* FCollectionRefrence.swift */,
+				904966782911943D00183EBF /* FirebaseUserListener.swift */,
+			);
+			path = FirebaseHelpers;
 			sourceTree = "<group>";
 		};
 		C08F715D2D42238D468E5A3E /* Pods */ = {
@@ -232,10 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				904966762911933700183EBF /* FCollectionRefrence.swift in Sources */,
 				9049667229118E6B00183EBF /* Constants.swift in Sources */,
 				9049667029118C1000183EBF /* User.swift in Sources */,
 				9010ADD3291023DB00BCDF0E /* LoginViewController.swift in Sources */,
 				9010ADCF291023DB00BCDF0E /* AppDelegate.swift in Sources */,
+				904966792911943D00183EBF /* FirebaseUserListener.swift in Sources */,
 				9010ADD1291023DB00BCDF0E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

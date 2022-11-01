@@ -10,7 +10,7 @@ import Firebase
 import FirebaseFirestoreSwift
 
 struct User: Codable, Equatable {
-    var id = ""
+    var id: String
     var username: String
     var email: String
     var pushID = ""
@@ -42,3 +42,13 @@ struct User: Codable, Equatable {
     }
 }
 
+
+func saveUserLocally(_ user: User){
+    let encoder = JSONEncoder()
+    do {
+        let data = try encoder.encode(user)
+        UserDefaults.standard.setValue(data, forKey: kCURRENTUSER)
+    }catch{
+        print("error saving user locally.", error.localizedDescription)
+    }
+}
