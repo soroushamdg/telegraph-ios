@@ -32,7 +32,7 @@ class SettingsTableViewController: UITableViewController {
                 
                 DispatchQueue.main.async {
                     loginView.modalPresentationStyle = .fullScreen
-                    self.present(loginView,animated: true, completion: nil)
+                    self.present(loginView,animated: true, completion: nil )
                 }
             }
         }
