@@ -14,6 +14,7 @@
 		9010ADD8291023DC00BCDF0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9010ADD7291023DC00BCDF0E /* Assets.xcassets */; };
 		9010ADDB291023DC00BCDF0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9010ADD9291023DC00BCDF0E /* LaunchScreen.storyboard */; };
 		9020B2DE2910326900FE883D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9020B2DD2910326900FE883D /* GoogleService-Info.plist */; };
+		9048EE9E2915B67900CFB8C0 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9048EE9D2915B67900CFB8C0 /* SettingsTableViewController.swift */; };
 		9049667029118C1000183EBF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049666F29118C1000183EBF /* User.swift */; };
 		9049667229118E6B00183EBF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049667129118E6B00183EBF /* Constants.swift */; };
 		904966762911933700183EBF /* FCollectionRefrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904966752911933700183EBF /* FCollectionRefrence.swift */; };
@@ -32,6 +33,7 @@
 		9010ADDA291023DC00BCDF0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9010ADDC291023DC00BCDF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9020B2DD2910326900FE883D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9048EE9D2915B67900CFB8C0 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		9049666F29118C1000183EBF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9049667129118E6B00183EBF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		904966752911933700183EBF /* FCollectionRefrence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionRefrence.swift; sourceTree = "<group>"; };
@@ -83,9 +85,8 @@
 			children = (
 				90496677291193EF00183EBF /* FirebaseHelpers */,
 				9049666E29118C0200183EBF /* Models */,
-				9010ADCE291023DB00BCDF0E /* AppDelegate.swift */,
-				9010ADD0291023DB00BCDF0E /* SceneDelegate.swift */,
-				9010ADD2291023DB00BCDF0E /* LoginViewController.swift */,
+				9048EEA02915B6B500CFB8C0 /* App */,
+				9048EE9F2915B67F00CFB8C0 /* Views */,
 				9049667429118EFC00183EBF /* Utility */,
 				9010ADD4291023DB00BCDF0E /* Main.storyboard */,
 				9010ADD7291023DC00BCDF0E /* Assets.xcassets */,
@@ -94,6 +95,24 @@
 				9020B2DD2910326900FE883D /* GoogleService-Info.plist */,
 			);
 			path = Telegraph;
+			sourceTree = "<group>";
+		};
+		9048EE9F2915B67F00CFB8C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9010ADD2291023DB00BCDF0E /* LoginViewController.swift */,
+				9048EE9D2915B67900CFB8C0 /* SettingsTableViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9048EEA02915B6B500CFB8C0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9010ADCE291023DB00BCDF0E /* AppDelegate.swift */,
+				9010ADD0291023DB00BCDF0E /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		9049666E29118C0200183EBF /* Models */ = {
@@ -250,6 +269,7 @@
 				9049667229118E6B00183EBF /* Constants.swift in Sources */,
 				9049667029118C1000183EBF /* User.swift in Sources */,
 				9010ADD3291023DB00BCDF0E /* LoginViewController.swift in Sources */,
+				9048EE9E2915B67900CFB8C0 /* SettingsTableViewController.swift in Sources */,
 				9010ADCF291023DB00BCDF0E /* AppDelegate.swift in Sources */,
 				904966792911943D00183EBF /* FirebaseUserListener.swift in Sources */,
 				9010ADD1291023DB00BCDF0E /* SceneDelegate.swift in Sources */,
