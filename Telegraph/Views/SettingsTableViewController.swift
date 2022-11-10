@@ -26,6 +26,16 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
+        FirebaseUserListener.shared.logoutCurrentUser { error in
+            if error == nil {
+                let loginView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginView")
+                
+                DispatchQueue.main.async {
+                    loginView.modalPresentationStyle = .fullScreen
+                    self.present(loginView,animated: true, completion: nil)
+                }
+            }
+        }
     }
     
     //MARK: LIFE CYCLE
