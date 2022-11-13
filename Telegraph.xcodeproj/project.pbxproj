@@ -19,6 +19,7 @@
 		9049667229118E6B00183EBF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049667129118E6B00183EBF /* Constants.swift */; };
 		904966762911933700183EBF /* FCollectionRefrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904966752911933700183EBF /* FCollectionRefrence.swift */; };
 		904966792911943D00183EBF /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904966782911943D00183EBF /* FirebaseUserListener.swift */; };
+		90790DBB29217362005110ED /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90790DBA29217362005110ED /* EditProfileTableViewController.swift */; };
 		E31E10CCE5C9B7ACC240604D /* Pods_Telegraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A406C20A439F87C76482CE6 /* Pods_Telegraph.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		9049667129118E6B00183EBF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		904966752911933700183EBF /* FCollectionRefrence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionRefrence.swift; sourceTree = "<group>"; };
 		904966782911943D00183EBF /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
+		90790DBA29217362005110ED /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		92A550144BF7D95DBEE9C9E1 /* Pods-Telegraph.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telegraph.release.xcconfig"; path = "Target Support Files/Pods-Telegraph/Pods-Telegraph.release.xcconfig"; sourceTree = "<group>"; };
 		CEF14D57E068D754027113BB /* Pods-Telegraph.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telegraph.debug.xcconfig"; path = "Target Support Files/Pods-Telegraph/Pods-Telegraph.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 			children = (
 				9010ADD2291023DB00BCDF0E /* LoginViewController.swift */,
 				9048EE9D2915B67900CFB8C0 /* SettingsTableViewController.swift */,
+				90790DBA29217362005110ED /* EditProfileTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				9049667029118C1000183EBF /* User.swift in Sources */,
 				9010ADD3291023DB00BCDF0E /* LoginViewController.swift in Sources */,
 				9048EE9E2915B67900CFB8C0 /* SettingsTableViewController.swift in Sources */,
+				90790DBB29217362005110ED /* EditProfileTableViewController.swift in Sources */,
 				9010ADCF291023DB00BCDF0E /* AppDelegate.swift in Sources */,
 				904966792911943D00183EBF /* FirebaseUserListener.swift in Sources */,
 				9010ADD1291023DB00BCDF0E /* SceneDelegate.swift in Sources */,
