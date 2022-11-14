@@ -85,7 +85,21 @@ class EditProfileTableViewController: UITableViewController {
         Config.Camera.imageLimit = 1
         Config.initialTab = .imageTab
         
-        self.present(gallery,animated: true, completion: nil)
+        self.present(gallary,animated: true, completion: nil)
+    }
+    
+    //MARK: UPLOAD IMAGES
+    private func uploadAvatarImage(_ image : UIImage){
+        let fileDirectory = "Avatars/_\(User.currentId).jpg"
+        FileStorage.uploadImage(image, directory: fileDirectory) { documentLink in
+            if var user = User.currentUser {
+                user.avatarLink = documentLink ?? ""
+                saveUserLocally(user)
+                FirebaseUserListener.shared.saveUserToFirestore(user)
+            }
+            
+            FileStorage.saveFileLocally(fileData: image.jpegData(compressionQuality: 1.0)! as NSData, fileName: User.currentId)
+        }
     }
 }
 
@@ -115,6 +129,7 @@ extension EditProfileTableViewController: GalleryControllerDelegate {
             images.first!.resolve { avatar in
                 
                 if avatar != nil {
+                    self.uploadAvatarImage(avatar!)
                     self.avatarImageView.image = avatar
                 }else{
                     ProgressHUD.showFailed("Couldn't select image.")

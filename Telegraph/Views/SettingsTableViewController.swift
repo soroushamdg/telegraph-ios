@@ -73,7 +73,11 @@ class SettingsTableViewController: UITableViewController {
             usernameLabel.text = user.username
             statusLabel.text = user.status
             appversionLabel.text = "App version \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "")"
-            if user.avatarLink != "" {}
+            if user.avatarLink != "" {
+                FileStorage.downloadImage(imageUrl: user.avatarLink) { image in
+                    
+                }
+            }
         }
     }
 }

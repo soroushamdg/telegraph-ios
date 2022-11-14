@@ -41,4 +41,36 @@ class FileStorage {
             ProgressHUD.showProgress(CGFloat(progress))
         }
     }
+    
+    class func downloadImage(imageUrl: String,completion: @escaping (_ image:UIImage?) -> Void){
+        print("URL is ", imageUrl)
+        let imageFileName = fileNameFrom(fileUrl: imageUrl)
+        if fileExistsAtPath(path: imageFileName) {
+            
+        }else{
+            
+        }
+    }
+    
+    //MARK: SAVE LOCALLY
+    class func saveFileLocally(fileData : NSData, fileName: String){
+        let documentUrl = getDocumentsURL().appendingPathComponent(fileName, isDirectory: false)
+        fileData.write(to: documentUrl,atomically: true)
+    }
+}
+
+//MARK: HELPERS
+func fileInDocumentsDirectory(fileName: String) -> String {
+    return getDocumentsURL().appendingPathComponent(fileName).path
+}
+func getDocumentsURL() -> URL{
+    return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!
+}
+
+func fileExistsAtPath(path: String) -> Bool {
+    var doesExist = false
+    let filePath = fileInDocumentsDirectory(fileName: path)
+    let fileManager = FileManager.default
+    doesExist = fileManager.fileExists(atPath: filePath)
+    return doesExist
 }
