@@ -10,3 +10,5 @@ import Foundation
 public let kCURRENTUSER = "currentUser"
 
 let userDefaults = UserDefaults.standard
+
+public let kFILEREFRENCE = "gs://telegraph-662da.appspot.com"
