@@ -569,14 +569,14 @@
             </objects>
             <point key="canvasLocation" x="3581.5384615384614" y="969.66824644549763"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Status Table View Controller-->
         <scene sceneID="xMI-N9-ALt">
             <objects>
-                <tableViewController id="f9h-9r-Xw8" sceneMemberID="viewController">
+                <tableViewController id="f9h-9r-Xw8" customClass="StatusTableViewController" customModule="Telegraph" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2Yl-HM-R4M">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="tableviewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="0bg-73-goO" style="IBUITableViewCellStyleDefault" id="chp-tg-Dnp">
                                 <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
