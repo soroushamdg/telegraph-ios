@@ -8,6 +8,7 @@
 import Foundation
 
 public let kCURRENTUSER = "currentUser"
+public let kSTATUS = "status"
 
 let userDefaults = UserDefaults.standard
 

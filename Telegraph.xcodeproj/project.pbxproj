@@ -18,6 +18,7 @@
 		9038A8E22922ADF300D422BB /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038A8E12922ADF300D422BB /* GlobalFunctions.swift */; };
 		9038A8E42922BBA500D422BB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038A8E32922BBA500D422BB /* Extensions.swift */; };
 		9038A8E62922CF2600D422BB /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038A8E52922CF2600D422BB /* Status.swift */; };
+		9038A8E82922D15400D422BB /* StatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038A8E72922D15400D422BB /* StatusTableViewController.swift */; };
 		9048EE9E2915B67900CFB8C0 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9048EE9D2915B67900CFB8C0 /* SettingsTableViewController.swift */; };
 		9049667029118C1000183EBF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049666F29118C1000183EBF /* User.swift */; };
 		9049667229118E6B00183EBF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049667129118E6B00183EBF /* Constants.swift */; };
@@ -42,6 +43,7 @@
 		9038A8E12922ADF300D422BB /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		9038A8E32922BBA500D422BB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9038A8E52922CF2600D422BB /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		9038A8E72922D15400D422BB /* StatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewController.swift; sourceTree = "<group>"; };
 		9048EE9D2915B67900CFB8C0 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		9049666F29118C1000183EBF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9049667129118E6B00183EBF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				9010ADD2291023DB00BCDF0E /* LoginViewController.swift */,
 				9048EE9D2915B67900CFB8C0 /* SettingsTableViewController.swift */,
 				90790DBA29217362005110ED /* EditProfileTableViewController.swift */,
+				9038A8E72922D15400D422BB /* StatusTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				9048EE9E2915B67900CFB8C0 /* SettingsTableViewController.swift in Sources */,
 				9038A8E42922BBA500D422BB /* Extensions.swift in Sources */,
 				90790DBB29217362005110ED /* EditProfileTableViewController.swift in Sources */,
+				9038A8E82922D15400D422BB /* StatusTableViewController.swift in Sources */,
 				9038A8E62922CF2600D422BB /* Status.swift in Sources */,
 				9010ADCF291023DB00BCDF0E /* AppDelegate.swift in Sources */,
 				904966792911943D00183EBF /* FirebaseUserListener.swift in Sources */,
