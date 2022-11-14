@@ -75,7 +75,7 @@ class SettingsTableViewController: UITableViewController {
             appversionLabel.text = "App version \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "")"
             if user.avatarLink != "" {
                 FileStorage.downloadImage(imageUrl: user.avatarLink) { image in
-                    
+                    self.avatarImageView.image = image
                 }
             }
         }

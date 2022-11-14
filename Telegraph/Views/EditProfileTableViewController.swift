@@ -65,7 +65,11 @@ class EditProfileTableViewController: UITableViewController {
             usernameTextField.text = user.username
             statusLabel.text = user.status
             
-            if user.avatarLink != "" {}
+            if user.avatarLink != "" {
+                FileStorage.downloadImage(imageUrl: user.avatarLink) { image in
+                    self.avatarImageView.image = image
+                }
+            }
              
         }
     }
@@ -98,7 +102,7 @@ class EditProfileTableViewController: UITableViewController {
                 FirebaseUserListener.shared.saveUserToFirestore(user)
             }
             
-            FileStorage.saveFileLocally(fileData: image.jpegData(compressionQuality: 1.0)! as NSData, fileName: User.currentId)
+//            FileStorage.saveFileLocally(fileData: image.jpegData(compressionQuality: 1.0)! as NSData, fileName: User.currentId)
         }
     }
 }
