@@ -35,5 +35,10 @@ class FileStorage {
                 completion(downloadUrl.absoluteString)
             }
         })
+        
+        task.observe(StorageTaskStatus.progress) { storageTaskSnapshot in
+            let progress = storageTaskSnapshot.progress!.completedUnitCount / storageTaskSnapshot.progress!.totalUnitCount
+            ProgressHUD.showProgress(CGFloat(progress))
+        }
     }
 }
