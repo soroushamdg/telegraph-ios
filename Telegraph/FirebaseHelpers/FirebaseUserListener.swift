@@ -14,13 +14,13 @@ class FirebaseUserListener {
     private init () {}
     
     // MARK: LOGIN
-    func loginUserWithEmail(email: String, password: String, completion: @escaping (_ error:Error, _ isEmailVerified: Bool) -> Void) {
+    func loginUserWithEmail(email: String, password: String, completion: @escaping (_ error:Error?, _ isEmailVerified: Bool) -> Void) {
         
         Auth.auth().signIn(withEmail: email, password: password) { authDataResult, error in
             
             if error == nil && authDataResult!.user.isEmailVerified {
                 FirebaseUserListener.shared.downloadUserFromFirebase(userId: authDataResult!.user.uid,email: email)
-                completion(error!,true)
+                completion(nil ,true)
             }else{
                 print("email is not verified")
                 completion(error!, false)

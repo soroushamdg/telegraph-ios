@@ -111,9 +111,9 @@ class LoginViewController: UIViewController {
         case emailTextField:
             emailLabelOutlet.text = textField.hasText ? "Email" : ""
         case passwordTextField:
-            passwordTextField.text = textField.hasText ? "Password" : ""
+            passwordLabelOutlet.text = textField.hasText ? "Password" : ""
         default:
-            repeatPasswordTextField.text = textField.hasText ? "Repeat Password" : ""
+            repeatPasswordLabelOutlet.text = textField.hasText ? "Repeat Password" : ""
         }
     }
     
@@ -134,12 +134,13 @@ class LoginViewController: UIViewController {
             if error == nil {
                 if isEmailVerified{
                     print("user has logged in : ", User.currentUser?.email)
+                    self.goToApp()
                 } else {
                     ProgressHUD.showFailed("Please verify email")
                     self.resendButton.isHidden = false
                 }
             }else{
-                ProgressHUD.showFailed(error.localizedDescription)
+                ProgressHUD.showFailed(error!.localizedDescription)
             }
         }
     }
