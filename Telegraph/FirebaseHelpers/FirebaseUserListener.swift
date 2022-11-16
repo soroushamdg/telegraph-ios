@@ -105,5 +105,48 @@ class FirebaseUserListener {
             }
         }
     }
+    
+    func downloadAllUsersFromFirebase(completion: @escaping (_ allUsers:[User]) -> Void){
+        var users: [User] = []
+        
+        FirebaseRefrence(.User).limit(to: 500).getDocuments { snapshot, error in
+            guard let document = snapshot?.documents else {
+                print("no document in all users.")
+                return
+            }
+            let allUsers = document.compactMap { (snapshot) -> User? in
+                return try? snapshot.data(as: User.self)
+            }
+            for user in allUsers {
+                if User.currentId != user.id {
+                    users.append(user)
+                }
+            }
+            completion(users)
+        }
+            
+    }
+    
+    func downloadUsersFromFirebase(withIds: [String],completion: @escaping (_ allUsers:[User]) -> Void){
+        var count = 0
+        var usersArray: [User] = []
+        
+        for userId in withIds {
+            FirebaseRefrence(.User).document(userId).getDocument { snapshot, error in
+                guard let document = snapshot else {
+                    print("no document for user")
+                    return
+                }
+                
+                let user = try? document.data(as: User.self)
+                usersArray.append(user!)
+                count += 1
+                
+                if count == withIds.count {
+                    completion(usersArray)
+                }
+            }
+        }
+    }
 }
 
