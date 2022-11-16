@@ -20,6 +20,7 @@ class UsersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        createDummyUsers()
+        downloadUsers()
     }
 
     // MARK: - Table view data source
@@ -42,6 +43,19 @@ class UsersTableViewController: UITableViewController {
         let user = searchController.isActive ? filteredUsers[indexPath.row] : allUsers[indexPath.row]
         cell.configure(user: user)
         return cell
+    }
+    
+    //MARK: DOWNLOAD USERS
+    private func downloadUsers(){
+        FirebaseUserListener.shared.downloadAllUsersFromFirebase { allFirebaseUsers in
+            
+            self.allUsers = allFirebaseUsers
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+        }
     }
     
 
