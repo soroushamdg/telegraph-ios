@@ -8,6 +8,7 @@
 import UIKit
 
 class UsersTableViewController: UITableViewController {
+   
     
     //MARK: VARIABLE
     var allUsers: [User] = []
@@ -19,6 +20,7 @@ class UsersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSearchController()
 //        createDummyUsers()
         downloadUsers()
         tableView.tableFooterView = UIView()
@@ -59,6 +61,28 @@ class UsersTableViewController: UITableViewController {
         }
     }
     
+    //MARK: SETUP SEARCH CONTROLLER
+    private func setupSearchController(){
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
+        
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search user"
+        
+        searchController.searchResultsUpdater = self
+        definesPresentationContext = true
+    }
+    
+    private func filteredContentForSearchText(_ searchText: String){
+        filteredUsers = allUsers.filter { user in
+            return user.username.lowercased().contains(searchText.lowercased())
+        }
+        tableView.reloadData()
+    }
+}
 
-
+extension UsersTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filteredContentForSearchText(searchController.searchBar.text!)
+    }
 }
