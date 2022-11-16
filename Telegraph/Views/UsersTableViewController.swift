@@ -21,6 +21,7 @@ class UsersTableViewController: UITableViewController {
         super.viewDidLoad()
 //        createDummyUsers()
         downloadUsers()
+        tableView.tableFooterView = UIView()
     }
 
     // MARK: - Table view data source
