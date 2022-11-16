@@ -19,6 +19,8 @@
 		9038A8E42922BBA500D422BB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038A8E32922BBA500D422BB /* Extensions.swift */; };
 		9038A8E62922CF2600D422BB /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038A8E52922CF2600D422BB /* Status.swift */; };
 		9038A8E82922D15400D422BB /* StatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038A8E72922D15400D422BB /* StatusTableViewController.swift */; };
+		903A7E6829252C9F003F3D21 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A7E6729252C9F003F3D21 /* UserTableViewCell.swift */; };
+		903A7E6A29252CB5003F3D21 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A7E6929252CB5003F3D21 /* UsersTableViewController.swift */; };
 		9048EE9E2915B67900CFB8C0 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9048EE9D2915B67900CFB8C0 /* SettingsTableViewController.swift */; };
 		9049667029118C1000183EBF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049666F29118C1000183EBF /* User.swift */; };
 		9049667229118E6B00183EBF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049667129118E6B00183EBF /* Constants.swift */; };
@@ -44,6 +46,8 @@
 		9038A8E32922BBA500D422BB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9038A8E52922CF2600D422BB /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		9038A8E72922D15400D422BB /* StatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewController.swift; sourceTree = "<group>"; };
+		903A7E6729252C9F003F3D21 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		903A7E6929252CB5003F3D21 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		9048EE9D2915B67900CFB8C0 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		9049666F29118C1000183EBF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9049667129118E6B00183EBF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				9048EE9D2915B67900CFB8C0 /* SettingsTableViewController.swift */,
 				90790DBA29217362005110ED /* EditProfileTableViewController.swift */,
 				9038A8E72922D15400D422BB /* StatusTableViewController.swift */,
+				903A7E6729252C9F003F3D21 /* UserTableViewCell.swift */,
+				903A7E6929252CB5003F3D21 /* UsersTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -285,8 +291,10 @@
 			files = (
 				9038A8E22922ADF300D422BB /* GlobalFunctions.swift in Sources */,
 				904966762911933700183EBF /* FCollectionRefrence.swift in Sources */,
+				903A7E6A29252CB5003F3D21 /* UsersTableViewController.swift in Sources */,
 				9038A8E029229B4600D422BB /* FileStorage.swift in Sources */,
 				9049667229118E6B00183EBF /* Constants.swift in Sources */,
+				903A7E6829252C9F003F3D21 /* UserTableViewCell.swift in Sources */,
 				9049667029118C1000183EBF /* User.swift in Sources */,
 				9010ADD3291023DB00BCDF0E /* LoginViewController.swift in Sources */,
 				9048EE9E2915B67900CFB8C0 /* SettingsTableViewController.swift in Sources */,
