@@ -57,6 +57,21 @@ class UsersTableViewController: UITableViewController {
         return cell
     }
     
+    //MARK: TABLE VIEW DELEGATE
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor(named:"tableviewBackgroundColor")
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 5
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     //MARK: DOWNLOAD USERS
     private func downloadUsers(){
         FirebaseUserListener.shared.downloadAllUsersFromFirebase { allFirebaseUsers in
