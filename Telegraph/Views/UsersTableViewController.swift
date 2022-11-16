@@ -20,10 +20,19 @@ class UsersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.refreshControl = UIRefreshControl()
+        self.tableView.refreshControl = self.refreshControl
+        
         setupSearchController()
 //        createDummyUsers()
         downloadUsers()
         tableView.tableFooterView = UIView()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     // MARK: - Table view data source
@@ -78,6 +87,14 @@ class UsersTableViewController: UITableViewController {
             return user.username.lowercased().contains(searchText.lowercased())
         }
         tableView.reloadData()
+    }
+    
+    //MARK: UI SCROLL VIEW DELEGATE - REFRESH
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if self.refreshControl!.isRefreshing {
+            self.downloadUsers()
+            self.refreshControl!.endRefreshing()
+        }
     }
 }
 
