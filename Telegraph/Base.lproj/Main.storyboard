@@ -789,7 +789,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="tableviewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="plK-I1-e4z">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="plK-I1-e4z" customClass="RecentChatTableViewCell" customModule="Telegraph" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="390" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="plK-I1-e4z" id="Edf-r9-bR5">
@@ -868,6 +868,14 @@
                                         <constraint firstAttribute="bottom" secondItem="FVn-pc-HAT" secondAttribute="bottom" constant="10" id="pYn-bO-x0J"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="v67-dx-Z7v" id="zeT-k0-8lT"/>
+                                    <outlet property="dateLabel" destination="lf7-VK-0gc" id="ZHT-IL-z30"/>
+                                    <outlet property="lastMessageLabel" destination="0Nz-iw-TJx" id="Zm5-bv-YrV"/>
+                                    <outlet property="unreadCounterBackgroundView" destination="FVn-pc-HAT" id="cdx-Uo-Q87"/>
+                                    <outlet property="unreadCounterLabel" destination="S0p-Jy-Cfa" id="0bk-Of-LzX"/>
+                                    <outlet property="usernameLabel" destination="m7z-m5-N1X" id="YNu-ND-TXF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
