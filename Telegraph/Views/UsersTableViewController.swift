@@ -70,6 +70,9 @@ class UsersTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let user = searchController.isActive ? filteredUsers[indexPath.row] : allUsers[indexPath.row]
+        showUserProfile(user: user)
     }
     
     //MARK: DOWNLOAD USERS
@@ -110,6 +113,13 @@ class UsersTableViewController: UITableViewController {
             self.downloadUsers()
             self.refreshControl!.endRefreshing()
         }
+    }
+    
+    //MARK: NAVIGATION
+    private func showUserProfile(user: User){
+        let profileView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileView") as! ProfileTableViewController
+        profileView.user = user
+        self.navigationController?.pushViewController(profileView, animated: true)
     }
 }
 
