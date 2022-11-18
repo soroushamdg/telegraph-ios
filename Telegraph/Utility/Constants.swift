@@ -11,7 +11,7 @@ public let kCURRENTUSER = "currentUser"
 public let kSTATUS = "status"
 public let kFIRSTRUN = "firstrun"
 public let kCHATROOMID = "chatRoomId"
-
+public let kSENDERID = "senderId"
 let userDefaults = UserDefaults.standard
 
 public let kFILEREFRENCE = "gs://telegraph-662da.appspot.com"
