@@ -30,6 +30,8 @@
 		90790DBB29217362005110ED /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90790DBA29217362005110ED /* EditProfileTableViewController.swift */; };
 		9089ABC82927C92C005D311D /* RecentChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABC72927C92C005D311D /* RecentChat.swift */; };
 		9089ABCA2927CD1F005D311D /* RecentChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABC92927CD1F005D311D /* RecentChatTableViewCell.swift */; };
+		9089ABCC2927DEB0005D311D /* StartChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABCB2927DEB0005D311D /* StartChat.swift */; };
+		9089ABCE2927E15D005D311D /* RecentChatListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABCD2927E15D005D311D /* RecentChatListener.swift */; };
 		E31E10CCE5C9B7ACC240604D /* Pods_Telegraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A406C20A439F87C76482CE6 /* Pods_Telegraph.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		90790DBA29217362005110ED /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		9089ABC72927C92C005D311D /* RecentChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChat.swift; sourceTree = "<group>"; };
 		9089ABC92927CD1F005D311D /* RecentChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatTableViewCell.swift; sourceTree = "<group>"; };
+		9089ABCB2927DEB0005D311D /* StartChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChat.swift; sourceTree = "<group>"; };
+		9089ABCD2927E15D005D311D /* RecentChatListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatListener.swift; sourceTree = "<group>"; };
 		92A550144BF7D95DBEE9C9E1 /* Pods-Telegraph.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telegraph.release.xcconfig"; path = "Target Support Files/Pods-Telegraph/Pods-Telegraph.release.xcconfig"; sourceTree = "<group>"; };
 		CEF14D57E068D754027113BB /* Pods-Telegraph.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telegraph.debug.xcconfig"; path = "Target Support Files/Pods-Telegraph/Pods-Telegraph.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +163,7 @@
 				9038A8E32922BBA500D422BB /* Extensions.swift */,
 				9049667129118E6B00183EBF /* Constants.swift */,
 				9038A8E12922ADF300D422BB /* GlobalFunctions.swift */,
+				9089ABCB2927DEB0005D311D /* StartChat.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			children = (
 				904966752911933700183EBF /* FCollectionRefrence.swift */,
 				904966782911943D00183EBF /* FirebaseUserListener.swift */,
+				9089ABCD2927E15D005D311D /* RecentChatListener.swift */,
 				9038A8DF29229B4600D422BB /* FileStorage.swift */,
 			);
 			path = FirebaseHelpers;
@@ -314,6 +320,8 @@
 				90790DBB29217362005110ED /* EditProfileTableViewController.swift in Sources */,
 				9038A8E82922D15400D422BB /* StatusTableViewController.swift in Sources */,
 				9038A8E62922CF2600D422BB /* Status.swift in Sources */,
+				9089ABCE2927E15D005D311D /* RecentChatListener.swift in Sources */,
+				9089ABCC2927DEB0005D311D /* StartChat.swift in Sources */,
 				9010ADCF291023DB00BCDF0E /* AppDelegate.swift in Sources */,
 				904966792911943D00183EBF /* FirebaseUserListener.swift in Sources */,
 				9010ADD1291023DB00BCDF0E /* SceneDelegate.swift in Sources */,

@@ -10,6 +10,7 @@ import Foundation
 public let kCURRENTUSER = "currentUser"
 public let kSTATUS = "status"
 public let kFIRSTRUN = "firstrun"
+public let kCHATROOMID = "chatRoomId"
 
 let userDefaults = UserDefaults.standard
 
