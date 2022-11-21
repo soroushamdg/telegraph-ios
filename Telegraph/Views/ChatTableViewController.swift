@@ -57,6 +57,29 @@ class ChatTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    //MARK: TABLE VIEW DELEGATE
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle : UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)    {
+        if editingStyle == .delete {
+            let recent = searchController.isActive ? filteredRecents[indexPath.row] : allRecents[indexPath.row]
+            FirebaseRecentListener.shared.deleteRecent(recent)
+            searchController.isActive ? self.filteredRecents.remove(at: indexPath.row) : allRecents.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor(named: "tableviewBackgroundColor")
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 8
+    }
     //MARK: Download Chats
     private func downloadRecentChats() {
         FirebaseRecentListener.shared.downloadRecentChatsFromFirestore { recents in
