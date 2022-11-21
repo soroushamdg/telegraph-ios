@@ -31,12 +31,33 @@ class FirebaseRecentListener {
                 }
             }
             
-            recentChats.sorted { $0.date! > $1.date! }
+            recentChats.sort(by: { $0.date! > $1.date! })
             completion(recentChats)
         }
     }
     
-    func addRecent(_ recent: RecentChat) {
+    func resetRecentCounter(chatRoomId: String) {
+        FirebaseRefrence(.Recent).whereField(kCHATROOMID, isEqualTo: chatRoomId).whereField(kSENDERID, isEqualTo: User.currentId).getDocuments { snapshot, error in
+            guard let documents = snapshot?.documents else{
+                print("no documents for recent")
+                return
+            }
+            let allRecent = documents.compactMap { (queryDocumentSnapshot) -> RecentChat? in
+                return try? queryDocumentSnapshot.data(as: RecentChat.self)
+            }
+            if allRecent.count > 0 {
+                self.clearUnreadCounter(recent: allRecent.first!)
+            }
+        }
+    }
+    
+    func clearUnreadCounter(recent: RecentChat){
+        var newRecent = recent
+        newRecent.unreadCounter = 0
+        self.saveRecent(recent)
+    }
+    
+    func saveRecent(_ recent: RecentChat) {
         do{
             try FirebaseRefrence(.Recent).document(recent.id).setData(from: recent)
         }catch{
@@ -47,5 +68,7 @@ class FirebaseRecentListener {
     func deleteRecent(_ recent: RecentChat) {
         FirebaseRefrence(.Recent).document(recent.id).delete()
     }
+    
+    
     
 }
