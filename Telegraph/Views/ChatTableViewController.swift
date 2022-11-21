@@ -13,7 +13,7 @@ class ChatTableViewController: UITableViewController {
     var filteredRecents:[RecentChat] = []
     
     let searchController = UISearchController(searchResultsController: nil)
-
+    
     //MARK: VIEW LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class ChatTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
@@ -38,7 +38,7 @@ class ChatTableViewController: UITableViewController {
     }
     
     
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RecentChatTableViewCell
@@ -69,7 +69,9 @@ class ChatTableViewController: UITableViewController {
     //MARK: TABLE VIEW DELEGATE
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        let recent = searchController.isActive ? filteredRecents[indexPath.row] : allRecents[indexPath.row]
+        FirebaseRecentListener.shared.clearUnreadCounter(recent: recent)
+        goToChat(recent: recent)
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -94,6 +96,15 @@ class ChatTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 8
     }
+    
+    //MARK: NAVIGATION
+    private func goToChat(recent: RecentChat){
+        restartChat(chatRoomId: recent.chatRoomID, memberIds: recent.memberIds)
+        let privateChatView = ChatViewController(chatId: recent.chatRoomID, recipientId: recent.receiverId, recipientName: recent.receiverName)
+        privateChatView.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(privateChatView, animated: true)
+    }
+    
     //MARK: Download Chats
     private func downloadRecentChats() {
         FirebaseRecentListener.shared.downloadRecentChatsFromFirestore { recents in
@@ -103,7 +114,7 @@ class ChatTableViewController: UITableViewController {
             }
         }
     }
-
+    
 }
 
 extension ChatTableViewController: UISearchResultsUpdating {
