@@ -32,6 +32,7 @@
 		9089ABCA2927CD1F005D311D /* RecentChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABC92927CD1F005D311D /* RecentChatTableViewCell.swift */; };
 		9089ABCC2927DEB0005D311D /* StartChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABCB2927DEB0005D311D /* StartChat.swift */; };
 		9089ABCE2927E15D005D311D /* FirebaseRecentChatListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABCD2927E15D005D311D /* FirebaseRecentChatListener.swift */; };
+		90CCFF93292BCA2C007A3458 /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CCFF92292BCA2C007A3458 /* ChatTableViewController.swift */; };
 		E31E10CCE5C9B7ACC240604D /* Pods_Telegraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A406C20A439F87C76482CE6 /* Pods_Telegraph.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		9089ABC92927CD1F005D311D /* RecentChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatTableViewCell.swift; sourceTree = "<group>"; };
 		9089ABCB2927DEB0005D311D /* StartChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChat.swift; sourceTree = "<group>"; };
 		9089ABCD2927E15D005D311D /* FirebaseRecentChatListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRecentChatListener.swift; sourceTree = "<group>"; };
+		90CCFF92292BCA2C007A3458 /* ChatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
 		92A550144BF7D95DBEE9C9E1 /* Pods-Telegraph.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telegraph.release.xcconfig"; path = "Target Support Files/Pods-Telegraph/Pods-Telegraph.release.xcconfig"; sourceTree = "<group>"; };
 		CEF14D57E068D754027113BB /* Pods-Telegraph.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telegraph.debug.xcconfig"; path = "Target Support Files/Pods-Telegraph/Pods-Telegraph.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +136,7 @@
 				903A7E6929252CB5003F3D21 /* UsersTableViewController.swift */,
 				903A7E6B29254A70003F3D21 /* ProfileTableViewController.swift */,
 				9089ABC92927CD1F005D311D /* RecentChatTableViewCell.swift */,
+				90CCFF92292BCA2C007A3458 /* ChatTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				9038A8E82922D15400D422BB /* StatusTableViewController.swift in Sources */,
 				9038A8E62922CF2600D422BB /* Status.swift in Sources */,
 				9089ABCE2927E15D005D311D /* FirebaseRecentChatListener.swift in Sources */,
+				90CCFF93292BCA2C007A3458 /* ChatTableViewController.swift in Sources */,
 				9089ABCC2927DEB0005D311D /* StartChat.swift in Sources */,
 				9010ADCF291023DB00BCDF0E /* AppDelegate.swift in Sources */,
 				904966792911943D00183EBF /* FirebaseUserListener.swift in Sources */,
