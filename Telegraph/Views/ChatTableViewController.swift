@@ -26,13 +26,15 @@ class ChatTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return allRecents.count
+        
+        return searchController.isActive ? filteredRecents.count : allRecents.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RecentChatTableViewCell
-        cell.configure(recent: allRecents[indexPath.row])
+        let recent = searchController.isActive ? filteredRecents[indexPath.row] : allRecents[indexPath.row]
+        cell.configure(recent: recent)
         return cell
     }
     
