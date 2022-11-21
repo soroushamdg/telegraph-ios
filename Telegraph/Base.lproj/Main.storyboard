@@ -226,7 +226,7 @@
         <!--Users-->
         <scene sceneID="2DP-De-C7k">
             <objects>
-                <tableViewController title="Users" id="TFo-Tg-8Yk" customClass="UsersTableViewController" customModule="Telegraph" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="usersView" title="Users" id="TFo-Tg-8Yk" customClass="UsersTableViewController" customModule="Telegraph" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="VJh-sn-TKv">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -883,7 +883,13 @@
                             <outlet property="delegate" destination="VmZ-2h-Xu0" id="EKa-Wz-41W"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Chats" id="c7W-Zf-F5E"/>
+                    <navigationItem key="navigationItem" title="Chats" id="c7W-Zf-F5E">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="ZMt-9E-sr1">
+                            <connections>
+                                <action selector="composeBarButtonPressed:" destination="VmZ-2h-Xu0" id="4PA-Au-DQE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mul-ZX-2c1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

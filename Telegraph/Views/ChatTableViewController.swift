@@ -21,7 +21,14 @@ class ChatTableViewController: UITableViewController {
         downloadRecentChats()
         setupSearchController()
     }
-
+    
+    //MARK: IBACTION
+    @IBAction func composeBarButtonPressed(_ sender: Any) {
+        let userView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "userView") as! UsersTableViewController
+        
+        navigationController?.pushViewController(userView, animated: true)
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,6 +36,8 @@ class ChatTableViewController: UITableViewController {
         
         return searchController.isActive ? filteredRecents.count : allRecents.count
     }
+    
+    
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,6 +67,10 @@ class ChatTableViewController: UITableViewController {
     }
     
     //MARK: TABLE VIEW DELEGATE
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
