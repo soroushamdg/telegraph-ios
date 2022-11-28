@@ -10,7 +10,7 @@ import MessageKit
 
 extension ChatViewController: MessagesDataSource {
     func currentSender() -> MessageKit.SenderType {
-        <#code#>
+        return currentUser
     }
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessageKit.MessagesCollectionView) -> MessageKit.MessageType {

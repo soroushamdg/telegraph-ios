@@ -18,6 +18,7 @@ class ChatViewController: MessagesViewController {
     private var recipientId : String = ""
     private var recipientName : String = ""
     
+    let currentUser = MKSender(senderId: User.currentId, displayName: User.currentUser?.username)
     private var refreshController = UIRefreshControl()
     
     let micButton = InputBarButtonItem()

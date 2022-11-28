@@ -6,9 +6,9 @@
 //
 
 import Foundation
-import InputBarAccessoryView
+import MessageKit
 
-extension ChatViewController:  InputBarAccessoryViewDelegate{
+extension ChatViewController:  MessagesLayoutDelegate{
    
     
 }
