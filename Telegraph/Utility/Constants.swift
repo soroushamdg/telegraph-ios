@@ -15,3 +15,12 @@ public let kSENDERID = "senderId"
 let userDefaults = UserDefaults.standard
 
 public let kFILEREFRENCE = "gs://telegraph-662da.appspot.com"
+
+public let kSENT = "sent"
+public let kREAD = "read"
+
+public let kTEXT = "text"
+public let kPHOTO = "photo"
+public let kVIDEO = "video"
+public let kAUDIO = "audio"
+public let kLocation = "location"

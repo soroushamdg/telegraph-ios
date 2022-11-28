@@ -36,6 +36,7 @@
 		906002172935121700D42A9F /* MKMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906002162935121700D42A9F /* MKMessage.swift */; };
 		906002192935141400D42A9F /* LocalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906002182935141400D42A9F /* LocalMessage.swift */; };
 		9060021C29351CFA00D42A9F /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060021B29351CFA00D42A9F /* RealmManager.swift */; };
+		9060021E2935213800D42A9F /* OutgoingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060021D2935213800D42A9F /* OutgoingMessage.swift */; };
 		90790DBB29217362005110ED /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90790DBA29217362005110ED /* EditProfileTableViewController.swift */; };
 		9089ABC82927C92C005D311D /* RecentChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABC72927C92C005D311D /* RecentChat.swift */; };
 		9089ABCA2927CD1F005D311D /* RecentChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABC92927CD1F005D311D /* RecentChatTableViewCell.swift */; };
@@ -79,6 +80,7 @@
 		906002162935121700D42A9F /* MKMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMessage.swift; sourceTree = "<group>"; };
 		906002182935141400D42A9F /* LocalMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMessage.swift; sourceTree = "<group>"; };
 		9060021B29351CFA00D42A9F /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		9060021D2935213800D42A9F /* OutgoingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingMessage.swift; sourceTree = "<group>"; };
 		90790DBA29217362005110ED /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		9089ABC72927C92C005D311D /* RecentChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChat.swift; sourceTree = "<group>"; };
 		9089ABC92927CD1F005D311D /* RecentChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				9089ABC72927C92C005D311D /* RecentChat.swift */,
 				9038A8E52922CF2600D422BB /* Status.swift */,
 				906002162935121700D42A9F /* MKMessage.swift */,
+				9060021D2935213800D42A9F /* OutgoingMessage.swift */,
 				9060021A2935142200D42A9F /* RealmMessages */,
 			);
 			path = Models;
@@ -368,6 +371,7 @@
 				9049667029118C1000183EBF /* User.swift in Sources */,
 				903A7E6C29254A70003F3D21 /* ProfileTableViewController.swift in Sources */,
 				9010ADD3291023DB00BCDF0E /* LoginViewController.swift in Sources */,
+				9060021E2935213800D42A9F /* OutgoingMessage.swift in Sources */,
 				9048EE9E2915B67900CFB8C0 /* SettingsTableViewController.swift in Sources */,
 				9038A8E42922BBA500D422BB /* Extensions.swift in Sources */,
 				90790DBB29217362005110ED /* EditProfileTableViewController.swift in Sources */,
