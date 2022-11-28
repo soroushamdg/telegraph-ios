@@ -24,4 +24,16 @@ class RealmManager{
             print("Error saving realm object.", error.localizedDescription)
         }
     }
+    
+    func removeFromRealm<T: Object>(_ object: T) {
+        do {
+            try realm.write({
+                realm.delete(object)
+            })
+        } catch {
+            print("Error saving realm object.", error.localizedDescription)
+        }
+    }
+    
+    
 }
