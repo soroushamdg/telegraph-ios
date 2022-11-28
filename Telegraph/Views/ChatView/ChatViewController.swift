@@ -18,12 +18,13 @@ class ChatViewController: MessagesViewController {
     private var recipientId : String = ""
     private var recipientName : String = ""
     
-    let currentUser = MKSender(senderId: User.currentId, displayName: User.currentUser?.username)
+    let currentUser = MKSender(senderId: User.currentId, displayName: User.currentUser!.username)
     private var refreshController = UIRefreshControl()
     
     let micButton = InputBarButtonItem()
     let attachButton = InputBarButtonItem()
 
+    var mkMessages: [MKMessage] = []
     
     //MARK: INITIALIZERS
     init(chatId: String, recipientId: String, recipientName: String){
