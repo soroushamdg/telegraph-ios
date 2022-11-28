@@ -37,6 +37,7 @@
 		906002192935141400D42A9F /* LocalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906002182935141400D42A9F /* LocalMessage.swift */; };
 		9060021C29351CFA00D42A9F /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060021B29351CFA00D42A9F /* RealmManager.swift */; };
 		9060021E2935213800D42A9F /* OutgoingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060021D2935213800D42A9F /* OutgoingMessage.swift */; };
+		906002202935271200D42A9F /* FirebaseMessageListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060021F2935271200D42A9F /* FirebaseMessageListener.swift */; };
 		90790DBB29217362005110ED /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90790DBA29217362005110ED /* EditProfileTableViewController.swift */; };
 		9089ABC82927C92C005D311D /* RecentChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABC72927C92C005D311D /* RecentChat.swift */; };
 		9089ABCA2927CD1F005D311D /* RecentChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABC92927CD1F005D311D /* RecentChatTableViewCell.swift */; };
@@ -81,6 +82,7 @@
 		906002182935141400D42A9F /* LocalMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMessage.swift; sourceTree = "<group>"; };
 		9060021B29351CFA00D42A9F /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		9060021D2935213800D42A9F /* OutgoingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingMessage.swift; sourceTree = "<group>"; };
+		9060021F2935271200D42A9F /* FirebaseMessageListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMessageListener.swift; sourceTree = "<group>"; };
 		90790DBA29217362005110ED /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		9089ABC72927C92C005D311D /* RecentChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChat.swift; sourceTree = "<group>"; };
 		9089ABC92927CD1F005D311D /* RecentChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				904966782911943D00183EBF /* FirebaseUserListener.swift */,
 				9089ABCD2927E15D005D311D /* FirebaseRecentChatListener.swift */,
 				9038A8DF29229B4600D422BB /* FileStorage.swift */,
+				9060021F2935271200D42A9F /* FirebaseMessageListener.swift */,
 			);
 			path = FirebaseHelpers;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				9060020F29350A8400D42A9F /* MessageDisplayDelegate.swift in Sources */,
 				9060020B29350A4900D42A9F /* MessageDataSource.swift in Sources */,
 				90CCFF93292BCA2C007A3458 /* ChatTableViewController.swift in Sources */,
+				906002202935271200D42A9F /* FirebaseMessageListener.swift in Sources */,
 				9060021C29351CFA00D42A9F /* RealmManager.swift in Sources */,
 				9060021129350A9500D42A9F /* MessageLayoutDelegate.swift in Sources */,
 				9089ABCC2927DEB0005D311D /* StartChat.swift in Sources */,

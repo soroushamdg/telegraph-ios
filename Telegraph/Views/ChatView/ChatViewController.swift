@@ -86,7 +86,7 @@ class ChatViewController: MessagesViewController {
     
     //MARK: ACTIONS
     func messageSend(text: String?, photo: UIImage?, video: String?, audio: String?, location: String?, audioDuration: Float = 0.0){
-        
+        OutgoingMessage.send(chatId: chatId, text: text, photo: photo, video: video, audio: audio, location: location, memberIds: [User.currentId, recipientId])
     }
     
 }
