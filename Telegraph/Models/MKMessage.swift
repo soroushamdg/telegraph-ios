@@ -25,7 +25,6 @@ class MKMessage : NSObject, MessageType {
     var readDate: Date
     
     init(message: LocalMessage) {
-        super.init()
         self.messageId = message.id
         self.mkSender = MKSender(senderId: message.senderId, displayName: message.senderName)
         self.status = message.status

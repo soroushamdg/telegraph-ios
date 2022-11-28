@@ -38,10 +38,11 @@ class ChatViewController: MessagesViewController {
         super.init(coder: coder)
     }
     
-    //MARK: VIEW LIFE CYCLE
+    //MARK: VIEW LIFE CYCLE 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureMessageInputBar()
+        configureMessageCollectionView()
         // Do any additional setup after loading the view.
     }
     
