@@ -34,6 +34,7 @@
 		9060021329350AA800D42A9F /* InputBarAccessoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060021229350AA800D42A9F /* InputBarAccessoryViewDelegate.swift */; };
 		9060021529350FEA00D42A9F /* MessageKitDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060021429350FEA00D42A9F /* MessageKitDefaults.swift */; };
 		906002172935121700D42A9F /* MKMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906002162935121700D42A9F /* MKMessage.swift */; };
+		906002192935141400D42A9F /* LocalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906002182935141400D42A9F /* LocalMessage.swift */; };
 		90790DBB29217362005110ED /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90790DBA29217362005110ED /* EditProfileTableViewController.swift */; };
 		9089ABC82927C92C005D311D /* RecentChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABC72927C92C005D311D /* RecentChat.swift */; };
 		9089ABCA2927CD1F005D311D /* RecentChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089ABC92927CD1F005D311D /* RecentChatTableViewCell.swift */; };
@@ -75,6 +76,7 @@
 		9060021229350AA800D42A9F /* InputBarAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBarAccessoryViewDelegate.swift; sourceTree = "<group>"; };
 		9060021429350FEA00D42A9F /* MessageKitDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageKitDefaults.swift; sourceTree = "<group>"; };
 		906002162935121700D42A9F /* MKMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMessage.swift; sourceTree = "<group>"; };
+		906002182935141400D42A9F /* LocalMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMessage.swift; sourceTree = "<group>"; };
 		90790DBA29217362005110ED /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		9089ABC72927C92C005D311D /* RecentChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChat.swift; sourceTree = "<group>"; };
 		9089ABC92927CD1F005D311D /* RecentChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				9089ABC72927C92C005D311D /* RecentChat.swift */,
 				9038A8E52922CF2600D422BB /* Status.swift */,
 				906002162935121700D42A9F /* MKMessage.swift */,
+				9060021A2935142200D42A9F /* RealmMessages */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +215,14 @@
 				9060021229350AA800D42A9F /* InputBarAccessoryViewDelegate.swift */,
 			);
 			path = ChatView;
+			sourceTree = "<group>";
+		};
+		9060021A2935142200D42A9F /* RealmMessages */ = {
+			isa = PBXGroup;
+			children = (
+				906002182935141400D42A9F /* LocalMessage.swift */,
+			);
+			path = RealmMessages;
 			sourceTree = "<group>";
 		};
 		C08F715D2D42238D468E5A3E /* Pods */ = {
@@ -340,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9089ABC82927C92C005D311D /* RecentChat.swift in Sources */,
+				906002192935141400D42A9F /* LocalMessage.swift in Sources */,
 				9038A8E22922ADF300D422BB /* GlobalFunctions.swift in Sources */,
 				904966762911933700183EBF /* FCollectionRefrence.swift in Sources */,
 				903A7E6A29252CB5003F3D21 /* UsersTableViewController.swift in Sources */,
