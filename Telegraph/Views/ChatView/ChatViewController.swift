@@ -25,6 +25,9 @@ class ChatViewController: MessagesViewController {
     let attachButton = InputBarButtonItem()
 
     var mkMessages: [MKMessage] = []
+    var allLocalMessages: Results<LocalMessage>!
+    
+    let realm = try! Realm()
     
     //MARK: INITIALIZERS
     init(chatId: String, recipientId: String, recipientName: String){
@@ -43,6 +46,8 @@ class ChatViewController: MessagesViewController {
         super.viewDidLoad()
         configureMessageInputBar()
         configureMessageCollectionView()
+        
+        loadChats()
         // Do any additional setup after loading the view.
     }
     
@@ -60,12 +65,12 @@ class ChatViewController: MessagesViewController {
     private func configureMessageInputBar(){
         messageInputBar.delegate = self
         
-        attachButton.image = UIImage(systemName: "plus")
+        attachButton.image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 30))
         attachButton.setSize(CGSize(width: 30, height: 30), animated: false)
         attachButton.onTouchUpInside { item in
         }
         
-        micButton.image = UIImage(systemName: "mic.fill")
+        micButton.image = UIImage(systemName: "mic.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 30))
         micButton.setSize(CGSize(width: 30, height: 40), animated: false)
         micButton.onTouchUpInside { item in
         }
@@ -82,6 +87,14 @@ class ChatViewController: MessagesViewController {
         
         messageInputBar.inputTextView.backgroundColor = .systemBackground
 
+    }
+    
+    //MARK: LOAD CHATS
+    private func loadChats() {
+        let predicate = NSPredicate(format: "\(kCHATROOMID) = %@", chatId)
+        allLocalMessages = realm.objects(LocalMessage.self).filter(predicate).sorted(byKeyPath: kDATE,ascending: true)
+        
+        print("we have all messages")
     }
     
     //MARK: ACTIONS
