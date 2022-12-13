@@ -101,7 +101,8 @@ class ChatViewController: MessagesViewController {
             switch changes {
             case .initial:
                 self.insertMessages()
-                break;
+                self.messagesCollectionView.reloadData()
+                self.messagesCollectionView.scrollToLastItem(animated: true)
             case .update(_,_,let insertion,_):
                 for index in insertion{
                     print("New message \(self.allLocalMessages[index].message)")
