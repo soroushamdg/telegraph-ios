@@ -23,7 +23,7 @@ class ChatViewController: MessagesViewController {
     
     let micButton = InputBarButtonItem()
     let attachButton = InputBarButtonItem()
-
+    
     var mkMessages: [MKMessage] = []
     var allLocalMessages: Results<LocalMessage>!
     
@@ -44,7 +44,7 @@ class ChatViewController: MessagesViewController {
         super.init(coder: coder)
     }
     
-    //MARK: VIEW LIFE CYCLE 
+    //MARK: VIEW LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         configureMessageInputBar()
@@ -89,7 +89,7 @@ class ChatViewController: MessagesViewController {
         messageInputBar.backgroundView.backgroundColor = .systemBackground
         
         messageInputBar.inputTextView.backgroundColor = .systemBackground
-
+        
     }
     
     //MARK: LOAD CHATS
@@ -100,7 +100,7 @@ class ChatViewController: MessagesViewController {
         notificationToken = allLocalMessages.observe({ (changes: RealmCollectionChange) in
             switch changes {
             case .initial:
-                print("We have \(self.allLocalMessages.count) messages")
+                self.insertMessages()
                 break;
             case .update(_,_,let insertion,_):
                 for index in insertion{
@@ -112,6 +112,17 @@ class ChatViewController: MessagesViewController {
                 break;
             }
         })
+    }
+    
+    private func insertMessages() {
+        for message in allLocalMessages {
+            insertMessage(message)
+        }
+    }
+    
+    private func insertMessage(_ localMessage: LocalMessage) {
+        let incoming = IncomingMessage(_collectionView: self)
+        self.mkMessages.append(incoming.createMessage(localMessage: localMessage)!)
     }
     
     //MARK: ACTIONS

@@ -14,6 +14,7 @@
 		9010ADD8291023DC00BCDF0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9010ADD7291023DC00BCDF0E /* Assets.xcassets */; };
 		9010ADDB291023DC00BCDF0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9010ADD9291023DC00BCDF0E /* LaunchScreen.storyboard */; };
 		9020B2DE2910326900FE883D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9020B2DD2910326900FE883D /* GoogleService-Info.plist */; };
+		903269D8294906E600E20AE4 /* IncomingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903269D7294906E600E20AE4 /* IncomingMessage.swift */; };
 		9038A8E029229B4600D422BB /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038A8DF29229B4600D422BB /* FileStorage.swift */; };
 		9038A8E22922ADF300D422BB /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038A8E12922ADF300D422BB /* GlobalFunctions.swift */; };
 		9038A8E42922BBA500D422BB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038A8E32922BBA500D422BB /* Extensions.swift */; };
@@ -59,6 +60,7 @@
 		9010ADDA291023DC00BCDF0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9010ADDC291023DC00BCDF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9020B2DD2910326900FE883D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		903269D7294906E600E20AE4 /* IncomingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessage.swift; sourceTree = "<group>"; };
 		9038A8DF29229B4600D422BB /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		9038A8E12922ADF300D422BB /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		9038A8E32922BBA500D422BB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				9038A8E52922CF2600D422BB /* Status.swift */,
 				906002162935121700D42A9F /* MKMessage.swift */,
 				9060021D2935213800D42A9F /* OutgoingMessage.swift */,
+				903269D7294906E600E20AE4 /* IncomingMessage.swift */,
 				9060021A2935142200D42A9F /* RealmMessages */,
 			);
 			path = Models;
@@ -380,6 +383,7 @@
 				90790DBB29217362005110ED /* EditProfileTableViewController.swift in Sources */,
 				9038A8E82922D15400D422BB /* StatusTableViewController.swift in Sources */,
 				9038A8E62922CF2600D422BB /* Status.swift in Sources */,
+				903269D8294906E600E20AE4 /* IncomingMessage.swift in Sources */,
 				90CCFF95292BEA3B007A3458 /* ChatViewController.swift in Sources */,
 				9089ABCE2927E15D005D311D /* FirebaseRecentChatListener.swift in Sources */,
 				9060020F29350A8400D42A9F /* MessageDisplayDelegate.swift in Sources */,
